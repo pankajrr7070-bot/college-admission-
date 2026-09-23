@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dehradun College Admission Guide</title>
+<style>
+:root{--navy:#102a43;--blue:#1976d2;--light:#f4f8fc;--text:#243b53;--muted:#627d98;--white:#fff;--green:#168a57}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--light);line-height:1.5}
+header{background:var(--white);position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #00000012}
+.nav{max-width:1180px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:21px;font-weight:800;color:var(--navy)}nav a{margin-left:18px;text-decoration:none;color:var(--text);font-weight:600}
+.hero{background:linear-gradient(135deg,#102a43,#1976d2);color:white;padding:75px 22px}
+.hero-inner{max-width:1180px;margin:auto}.hero h1{font-size:46px;line-height:1.08;margin:0 0 16px;max-width:700px}.hero p{font-size:19px;max-width:700px;opacity:.94}
+.search{background:white;padding:18px;border-radius:14px;max-width:850px;margin-top:28px;display:flex;gap:10px;box-shadow:0 10px 30px #0003}.search input,.search select{padding:14px;border:1px solid #d9e2ec;border-radius:9px;flex:1;font-size:15px}.btn{border:0;border-radius:9px;padding:14px 20px;background:var(--green);color:white;font-weight:700;cursor:pointer}
+section{max-width:1180px;margin:auto;padding:55px 22px}.section-title{text-align:center;margin-bottom:30px}.section-title h2{font-size:32px;margin:0 0 8px;color:var(--navy)}.section-title p{color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.feature,.card,.form-box{background:white;border-radius:14px;padding:24px;box-shadow:0 5px 20px #0000000b}.feature h3{margin:10px 0 5px}.icon{font-size:30px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:25px}.filters input,.filters select{padding:12px;border:1px solid #bcccdc;border-radius:8px;background:white}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card h3{color:var(--navy);margin-top:0}.tag{display:inline-block;background:#e8f1fb;color:#155a9c;border-radius:20px;padding:4px 9px;font-size:12px;font-weight:700}.card .actions{margin-top:18px;display:flex;gap:8px}.outline{background:white;color:var(--blue);border:1px solid var(--blue)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.step{text-align:center}.num{width:42px;height:42px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-weight:800}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form input,.form select,.form textarea{width:100%;padding:13px;border:1px solid #bcccdc;border-radius:8px}.form textarea{min-height:100px}.full{grid-column:1/-1}
+footer{background:var(--navy);color:white;padding:35px 22px;text-align:center}footer p{opacity:.8}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:20;align-items:center;justify-content:center;padding:20px}.modal-box{background:white;max-width:720px;width:100%;max-height:90vh;overflow:auto;border-radius:16px;padding:30px}.close{float:right;border:0;background:none;font-size:28px;cursor:pointer}
+@media(max-width:850px){nav{display:none}.features,.grid,.steps{grid-template-columns:1fr 1fr}.hero h1{font-size:36px}.search,.form{display:grid;grid-template-columns:1fr}}
+@media(max-width:550px){.features,.grid,.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<div class="logo">🎓 Dehradun College Admission Guide</div>
+<nav><a href="#colleges">Colleges</a><a href="#compare">Compare</a><a href="#process">Admission Guide</a><a href="#counselling">Counselling</a></nav>
+</div></header>
+
+<div class="hero"><div class="hero-inner">
+<h1>Find the Right College in Dehradun</h1>
+<p>Explore colleges, compare courses, understand eligibility and admission processes, and connect with official admission teams.</p>
+<div class="search">
+<input id="heroSearch" placeholder="Search college or course...">
+<select id="heroCourse"><option>All Courses</option><option>Agriculture</option><option>B.A.</option><option>B.Com</option><option>B.Sc</option><option>BBA</option><option>BCA</option><option>B.Tech</option><option>B.Arch</option><option>BBA LLB</option><option>BA LLB</option><option>LLB</option><option>LLM</option><option>B.Ed</option><option>M.Ed</option><option>B.P.Ed</option><option>B.Pharm</option><option>D.Pharm</option><option>B.Sc Nursing</option><option>GNM</option><option>ANM</option><option>BPT</option><option>MPT</option><option>BDS</option><option>MBBS</option><option>BHMS</option><option>BAMS</option><option>BAMS</option><option>Hotel Management</option><option>BHM</option><option>BHMCT</option><option>B.Des</option><option>Fashion Design</option><option>Interior Design</option><option>Journalism & Mass Communication</option><option>BA</option><option>MA</option><option>M.Com</option><option>M.Sc</option><option>MCA</option><option>MBA</option><option>M.Tech</option><option>M.Arch</option><option>M.Plan</option><option>MSW</option><option>MPH</option><option>MPA</option><option>Ph.D</option><option>Polytechnic/Diploma</option><option>Other</option></select>
+<button class="btn" onclick="searchColleges()">Find Colleges</button>
+</div>
+</div></div>
+
+<section><div class="section-title"><h2>Everything Students Need</h2><p>Simple information for students and parents before applying.</p></div>
+<div class="features">
+<div class="feature"><div class="icon">🏫</div><h3>Find Colleges</h3><p>Browse colleges and universities in Dehradun.</p></div>
+<div class="feature"><div class="icon">⚖️</div><h3>Compare</h3><p>Compare courses, fees, hostel and admission information.</p></div>
+<div class="feature"><div class="icon">📋</div><h3>Admission Guide</h3><p>Understand eligibility, documents and application steps.</p></div>
+<div class="feature"><div class="icon">👨‍👩‍👧</div><h3>Parent Support</h3><p>Get clear information to discuss options as a family.</p></div>
+</div></section>
+
+<section id="course-directory"><div class="section-title"><h2>Course Directory</h2><p>Explore the main course categories students may look for. Availability varies by institution.</p></div>
+<div class="features">
+<div class="feature"><div class="icon">🌾</div><h3>Agriculture</h3><p>B.Sc Agriculture and related agricultural programmes.</p></div>
+<div class="feature"><div class="icon">⚖️</div><h3>Law</h3><p>BBA LLB, BA LLB, LLB, LLM and related programmes.</p></div>
+<div class="feature"><div class="icon">💼</div><h3>Management</h3><p>BBA, MBA and other management programmes.</p></div>
+<div class="feature"><div class="icon">💻</div><h3>Computer & IT</h3><p>BCA, MCA, B.Tech, M.Tech and related programmes.</p></div>
+<div class="feature"><div class="icon">🏥</div><h3>Health & Nursing</h3><p>Nursing, Pharmacy, Physiotherapy and other health programmes.</p></div>
+<div class="feature"><div class="icon">📚</div><h3>Arts & Commerce</h3><p>BA, MA, B.Com, M.Com and related programmes.</p></div>
+<div class="feature"><div class="icon">🔬</div><h3>Science</h3><p>B.Sc, M.Sc and other science programmes.</p></div>
+<div class="feature"><div class="icon">🏨</div><h3>Hospitality & Design</h3><p>Hotel Management, Design, Fashion and related programmes.</p></div>
+</div></section>
+
+<section id="colleges"><div class="section-title"><h2>Dehradun Colleges & Universities</h2><p>Use the filters to find relevant options.</p></div>
+<div class="filters">
+<input id="collegeSearch" placeholder="Search college..." oninput="renderColleges()">
+<select id="typeFilter" onchange="renderColleges()"><option value="">All Types</option><option>University</option><option>College</option></select>
+<select id="courseFilter" onchange="renderColleges()"><option value="">All Courses</option><option>BBA</option><option>BCA</option><option>B.Tech</option><option>MBA</option><option>B.Com</option><option>Nursing</option><option>Pharmacy</option><option>Law</option></select>
+</div>
+<p style="color:#627d98;font-size:13px;margin-top:-10px">Course availability is institution-specific. Use the college's official admission page to verify the exact programme, eligibility, fees and current intake before applying.</p>
+<div id="collegeGrid" class="grid"></div>
+</section>
+
+<section id="compare"><div class="section-title"><h2>Compare Colleges</h2><p>Select colleges from the cards above and compare them.</p></div>
+<div id="compareArea" class="card"><p>Select up to 3 colleges using “Add to Compare”.</p></div>
+</section>
+
+<section id="process"><div class="section-title"><h2>Simple Admission Process</h2><p>A clear path from choosing a course to applying.</p></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><b>Choose Course</b><p>Identify your interest and eligibility.</p></div>
+<div class="step"><div class="num">2</div><b>Shortlist</b><p>Review suitable college options.</p></div>
+<div class="step"><div class="num">3</div><b>Compare</b><p>Check fees, hostel, facilities and process.</p></div>
+<div class="step"><div class="num">4</div><b>Apply</b><p>Use the official college application route.</p></div>
+<div class="step"><div class="num">5</div><b>Confirm</b><p>Complete admission with the official institution.</p></div>
+</div></section>
+
+<section id="counselling"><div class="section-title"><h2>Get Admission Guidance</h2><p>Tell us what you are looking for and we can help you understand your options.</p></div>
+<div class="form-box"><form class="form" onsubmit="submitForm(event)">
+<input required placeholder="Student Name">
+<input required placeholder="Mobile Number">
+<select required><option value="">12th Stream</option><option>Science</option><option>Commerce</option><option>Arts</option><option>Other</option></select>
+<input placeholder="12th Percentage">
+<select><option value="">Preferred Course</option><option>All Courses</option><option>Agriculture</option><option>B.A.</option><option>B.Com</option><option>B.Sc</option><option>BBA</option><option>BCA</option><option>B.Tech</option><option>B.Arch</option><option>BBA LLB</option><option>BA LLB</option><option>LLB</option><option>LLM</option><option>B.Ed</option><option>M.Ed</option><option>B.P.Ed</option><option>B.Pharm</option><option>D.Pharm</option><option>B.Sc Nursing</option><option>GNM</option><option>ANM</option><option>BPT</option><option>MPT</option><option>BDS</option><option>MBBS</option><option>BHMS</option><option>BAMS</option><option>BAMS</option><option>Hotel Management</option><option>BHM</option><option>BHMCT</option><option>B.Des</option><option>Fashion Design</option><option>Interior Design</option><option>Journalism & Mass Communication</option><option>BA</option><option>MA</option><option>M.Com</option><option>M.Sc</option><option>MCA</option><option>MBA</option><option>M.Tech</option><option>M.Arch</option><option>M.Plan</option><option>MSW</option><option>MPH</option><option>MPA</option><option>Ph.D</option><option>Polytechnic/Diploma</option><option>Other</option></select>
+<select><option value="">Hostel Required?</option><option>Yes</option><option>No</option></select>
+<input placeholder="Approx. Budget">
+<textarea class="full" placeholder="Any other requirement"></textarea>
+<button class="btn full" type="submit">Request Guidance</button>
+</form></div></section>
+
+<footer><h3>Dehradun College Admission Guide</h3><p>Helping students and families understand college options and admission processes.</p><p>For final fees, eligibility, dates and admission decisions, always verify information with the college's official admission office.</p></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+
+<script>
+const colleges=[
+{name:"Graphic Era Deemed to be University",type:"University",courses:["BBA","BCA","B.Tech","MBA","B.Com","BBA LLB","BA LLB"],location:"Dehradun",about:"A Dehradun-based university with multiple undergraduate and postgraduate programmes."},
+{name:"DIT University",type:"University",courses:["B.Tech","BCA","BBA","MBA","BBA LLB","BA LLB"],location:"Dehradun",about:"A university offering programmes across technology, management and related fields."},
+{name:"Uttaranchal University",type:"University",courses:["BBA","BCA","B.Tech","MBA","B.Com","BBA LLB","BA LLB","LLB","LLM"],location:"Dehradun",about:"A private university offering a range of undergraduate and postgraduate programmes."},
+{name:"Doon University",type:"University",courses:["BBA","BCA","MBA","BBA LLB","BA LLB","LLB","LLM"],location:"Dehradun",about:"A state university in Dehradun with undergraduate, postgraduate and research programmes."},
+{name:"Graphic Era Hill University",type:"University",courses:["BBA","BCA","B.Tech","MBA","BBA LLB","BA LLB"],location:"Dehradun",about:"A university with programmes across technology, management and other disciplines."},
+{name:"Jigyasa University",type:"University",courses:["BBA","BCA","B.Tech","MBA","BBA LLB","BA LLB"],location:"Dehradun",about:"A university offering professional and higher-education programmes."},
+{name:"IMS Unison University",type:"University",courses:["BBA","BCA","B.Com","MBA","Law"],location:"Dehradun",about:"A private university offering programmes in management, commerce, law and other areas."},
+{name:"The ICFAI University, Dehradun",type:"University",courses:["BBA","BCA","B.Tech","MBA","BBA LLB","BA LLB"],location:"Dehradun",about:"A private university offering professional and higher-education programmes."},
+{name:"Dev Bhoomi Uttarakhand University",type:"University",courses:["BBA","BCA","B.Tech","MBA","Nursing","Pharmacy","Agriculture","BBA LLB","BA LLB"],location:"Dehradun",about:"A university offering programmes across professional and applied disciplines."},
+{name:"D.A.V. Post Graduate College",type:"College",courses:["B.Com","BBA","BCA"],location:"Dehradun",about:"A postgraduate college in Dehradun offering undergraduate and postgraduate programmes."},
+{name:"Shivalik University",type:"University",courses:["BBA","BCA","B.Tech","MBA","Pharmacy"],location:"Dehradun",about:"A university offering professional programmes across several disciplines."},
+{name:"D.D. College",type:"College",courses:["BBA","BCA","B.Com","BBA LLB","BA LLB"],location:"Dehradun",about:"A Dehradun college offering undergraduate programmes."},
+{name:"Shri Guru Ram Rai University",type:"University",courses:["BBA","BCA","B.Tech","MBA","Nursing","Pharmacy","Agriculture","BBA LLB","BA LLB"],location:"Dehradun",about:"A university with programmes across health sciences, technology, management and other fields."},
+{name:"GRD Institute of Management & Technology",type:"College",courses:["BBA","BCA","B.Tech","MBA","BBA LLB","BA LLB"],location:"Dehradun",about:"An institute offering professional and management-oriented programmes."},
+{name:"UPES",type:"University",courses:["B.Tech","BBA","MBA","BBA LLB","BA LLB","LLB","LLM"],location:"Dehradun",about:"A university known for specialised programmes in areas including energy, technology, business and law."},
+{name:"Tula's Institute",type:"University",courses:["BBA","BCA","B.Tech","MBA","BBA LLB","BA LLB"],location:"Dehradun",about:"An institution offering professional undergraduate and postgraduate programmes."},
+{name:"D.B.S. (P.G.) College",type:"College",courses:["B.Com","BBA","BCA"],location:"Dehradun",about:"A postgraduate college in Dehradun offering undergraduate and postgraduate programmes."}
+];
+let compare=[];
+function renderColleges(){
+ const q=document.getElementById("collegeSearch").value.toLowerCase();
+ const type=document.getElementById("typeFilter").value;
+ const course=document.getElementById("courseFilter").value;
+ const list=colleges.filter(c=>(!q||c.name.toLowerCase().includes(q))&&(!type||c.type===type)&&(!course||c.courses.includes(course)));
+ document.getElementById("collegeGrid").innerHTML=list.map((c,i)=>`
+ <div class="card"><span class="tag">${c.type}</span><h3>${c.name}</h3><p>📍 ${c.location}</p><p>${c.about}</p><p><b>Courses to check:</b> ${c.courses.join(", ")}</p>
+ <div class="actions"><button class="btn" onclick="details('${c.name}')">View Details</button><button class="btn outline" onclick="addCompare('${c.name}')">Add to Compare</button></div></div>`).join("")||"<p>No colleges match your search.</p>";
+}
+function details(name){
+ const c=colleges.find(x=>x.name===name);
+ document.getElementById("modalContent").innerHTML=`<span class="tag">${c.type}</span><h2>${c.name}</h2><p>📍 ${c.location}</p><h3>Courses</h3><p>${c.courses.join(" • ")}</p><h3>What students can check</h3><ul><li>Eligibility requirements</li><li>Current fees and other charges</li><li>Admission dates and application process</li><li>Hostel and campus facilities</li><li>Scholarships</li><li>Placement information</li><li>Official admission contact</li></ul><p><b>Note:</b> Fees, dates, eligibility and other admission details should be verified with the institution's official admission office before applying.</p><button class="btn" onclick="document.getElementById('counselling').scrollIntoView();closeModal()">Get Admission Guidance</button>`;
+ document.getElementById("modal").style.display="flex";
+}
+function closeModal(){document.getElementById("modal").style.display="none"}
+function addCompare(name){if(!compare.includes(name)&&compare.length<3)compare.push(name); renderCompare();}
+function renderCompare(){
+ if(!compare.length){document.getElementById("compareArea").innerHTML="<p>Select up to 3 colleges using “Add to Compare”.</p>";return}
+ let cs=compare.map(n=>colleges.find(c=>c.name===n));
+ document.getElementById("compareArea").innerHTML=`<div style="overflow:auto"><table style="width:100%;border-collapse:collapse"><tr><th style="text-align:left;padding:10px;border-bottom:1px solid #ddd">Information</th>${cs.map(c=>`<th style="text-align:left;padding:10px;border-bottom:1px solid #ddd">${c.name}</th>`).join("")}</tr>
+ <tr><td style="padding:10px">Type</td>${cs.map(c=>`<td style="padding:10px">${c.type}</td>`).join("")}</tr>
+ <tr><td style="padding:10px">Location</td>${cs.map(c=>`<td style="padding:10px">${c.location}</td>`).join("")}</tr>
+ <tr><td style="padding:10px">Course categories</td>${cs.map(c=>`<td style="padding:10px">${c.courses.join(", ")}</td>`).join("")}</tr>
+ </table></div><button class="btn" style="margin-top:15px" onclick="compare=[];renderCompare()">Clear Comparison</button>`;
+}
+function searchColleges(){document.getElementById("collegeSearch").value=document.getElementById("heroSearch").value;document.getElementById("courseFilter").value=document.getElementById("heroCourse").value;document.getElementById("colleges").scrollIntoView();renderColleges();}
+function submitForm(e){e.preventDefault();alert("Thank you. Your enquiry has been recorded on this demo website. Connect this form to your email/CRM before publishing.");}
+renderColleges();
+</script>
+</body>
+</html>
